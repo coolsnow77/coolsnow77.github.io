@@ -8,20 +8,113 @@
     <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-   hello, coolsnow77
-  <h1> 你好世界.</h1>
+  <div class="container">
+      <div class="text-left">
+          <strong>
+              No pains, no gains.
+          </strong>
+      </div>
+      <div class="text-right">
+         <strong>Where there is a will, there is a way.</strong>
+      </div>
+  </div>
   <script src="/dist/js/jquery-2.1.4.min.js"></script>
   <script src="/dist/js/bootstrap.min.js"></script>
- <div class="container theme-showcase" role="main">
+ <div class="container jumbotron" role="main" style="padding: 10px 300px;">
      <p>
-         <button type="button" class="btn btn-lg btn-default">default</button>
-         <button type="button" class="btn btn-lg btn-info">info</button>
-         <button type="button" class="btn btn-lg btn-warning">warning</button>
-         <button type="button" class="btn btn-lg btn-primary">primary</button>
-         <button type="button" class="btn btn-lg btn-success">success</button>
-         <button type="button" class="btn btn-lg btn-danger">danger</button>
-         <button type="button" class="btn btn-lg btn-error"> link</button>
+         <button type="button" class="btn btn-lg btn-default">技术</button>
+         <button type="button" class="btn btn-lg btn-info">信息</button>
+         <button type="button" class="btn btn-lg btn-warning">...</button>
+         <button type="button" class="btn btn-lg btn-primary">文档</button>
+         <button type="button" class="btn btn-lg btn-success">杂谈</button>
+         <button type="button" class="btn btn-lg btn-danger">music</button>
+         <button type="button" class="btn btn-lg btn-error"> 关于</button>
      </p>
  </div>
+  <div class="container">
+      <h2>JQ</h2>
+      <p> 使用JQ 在shell 中处理JSON</p>
+      <h3>Download</h3>
+      <a href="/static/jq-1.4.tar.gz" alter="jq-1.4">jq-1.4.tar.gz</a>
+      <h3>Install</h3>
+      <pre>
+      Mac OS:
+              sudo brew install jq
+      Linux :
+          tar -zxvf jq-1.4.tar.gz
+          ./configure && make && make install
+          ln -s /usr/local/bin/jq /usr/bin/jq;
+      </pre>
+
+      <h3>example</h3>
+      <pre>
+          1. 格式化输出
+          ^_^coolsnow77:myJQ @$jq '.' file_jq.json
+            {
+              "Archiver-Version": "Plexus Archiver",
+              "Build-Id": "",
+              "Build-Jdk": "1.7.0_07",
+              "Build-Number": "",
+              "Build-Tag": "",
+              "Built-By": "cporter",
+              "Created-By": "Apache Maven",
+              "Implementation-Title": "northstar",
+              "Implementation-Vendor-Id": "com.test.testPack",
+              "Implementation-Version": "testBox",
+              "Manifest-Version": "1.0",
+              "appname": "testApp",
+              "build-date": "02-03-2014-13:41",
+              "version": "testBox",
+              "myname": {
+                "sex": "male",
+                "age": 30,
+                "hobby": "book"
+              },
+              "kyname": {
+                "sex": "female",
+                "age": 32,
+                "hobby": "jj"
+              }
+            }
+
+          2. 获取所有的keys:
+          ^_^coolsnow77:myJQ @$jq 'keys' file_jq.json
+            [
+              "Archiver-Version",
+              "Build-Id",
+              "Build-Jdk",
+              "Build-Number",
+              "Build-Tag",
+              "Built-By",
+              "Created-By",
+              "Implementation-Title",
+              "Implementation-Vendor-Id",
+              "Implementation-Version",
+              "Manifest-Version",
+              "appname",
+              "build-date",
+              "kyname",
+              "myname",
+              "version"
+            ]
+          3.1 组合获取：(获取所有的sex，age)
+          ^_^coolsnow77:myJQ @$jq  '.["myname", "kyname"] | {"sex", "age"}' file_jq.json
+            {
+              "sex": "male",
+              "age": 30
+            }
+            {
+              "sex": "female",
+              "age": 32
+            }
+
+          3.2 合并为一行输出, 添加 -c 参数
+          ^_^coolsnow77:myJQ @$jq -c '.["myname", "kyname"] | {"sex", "age"}' file_jq.json
+            {"sex":"male","age":30}
+            {"sex":"female","age":32}
+
+
+      </pre>
+  </div>
 </body>
 </html>
