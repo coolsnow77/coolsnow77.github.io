@@ -1,0 +1,8 @@
+{"Archiver-Version" : "Plexus Archiver", "Build-Id" : "", "Build-Jdk" :
+"1.7.0_07", "Build-Number" : "", "Build-Tag" : "", "Built-By" : "cporter",
+"Created-By" : "Apache Maven", "Implementation-Title" : "northstar",
+"Implementation-Vendor-Id" : "com.test.testPack", "Implementation-Version" :
+"testBox", "Manifest-Version" : "1.0", "appname" : "testApp", "build-date" :
+"02-03-2014-13:41", "version" : "testBox",
+"myname":{"sex": "male", "age": 30, "hobby": "book"},
+"kyname":{"sex": "female", "age": 32, "hobby": "jj"}}
