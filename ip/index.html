@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
@@ -24,14 +25,17 @@
 
         <p> </p>
         <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-        <script type="text/javascript">
-            var ipStr = "当前IP: "+ returnCitySN["cip"]+' '+ "来自: "+returnCitySN["cname"];
-            alert("ip: " + ipStr);
-            document.getElementByClassName('getIpClass').innerHTML = ipStr;
-        </script>
-
         <div>
             <p class="getIpClass"></p>
         </div>
+
+
+        <script>
+            var ipStr = "当前IP: "+ returnCitySN["cip"]+' '+ "来自: "+returnCitySN["cname"];
+            //alert("ip: " + ipStr);
+            document.getElementByClassName('getIpClass').innerHTML = ipStr;
+        </script>
+
+
     </body>
 </html>
