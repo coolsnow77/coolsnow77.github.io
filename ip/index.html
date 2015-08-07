@@ -1,11 +1,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-        <title>JavaScript获取客户端IP[利用新浪接口]</title>
+        <title>JavaScript获取客户端IP</title>
     </head>
     <body>
+        <!-- [利用新浪接口] -->
         <script type="text/javascript" src="http://counter.sina.com.cn/ip/"
             charset="gb2312"></script>       <!--获取接口数据，注意charset -->
+        <!--
         <script type="text/javascript">
             document.writeln("IP地址："+ILData[0]+"<br />");
             //输出接口数据中的IP地址
@@ -18,11 +20,18 @@
             document.writeln("地址类型："+ILData[4]+"<br />");
             //输出接口数据中的IP地址的运营商
         </script>
+        -->
 
-        <p> sohu_ip_search</p>
+        <p> </p>
         <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
         <script type="text/javascript">
-            document.write(returnCitySN["cip"]+','+returnCitySN["cname"])
+            var ipStr = "当前IP: "+ returnCitySN["cip"]+' '+ "来自:
+            "+returnCitySN["cname"];
+            document.getElementByClassName('getIpClass').innerHTML = ipStr;
         </script>
+
+        <div>
+            <p class="getIpClass"></p>
+        </div>
     </body>
 </html>
