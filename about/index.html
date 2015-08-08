@@ -2,37 +2,22 @@
 <html>
     <head>
         <title>
-            about me
+            about me[coolsnow77]
         </title>
      <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
 <body>
-  <div class="container">
-      <div class="text-left">
-          <strong>
-              No pains, no gains.
-          </strong>
-      </div>
-      <div class="text-right">
-         <strong>Where there is a will, there is a way.</strong>
-      </div>
-  </div>
-  <script src="/dist/js/jquery-2.1.4.min.js"></script>
-  <script src="/dist/js/bootstrap.min.js"></script>
- <div class="container jumbotron" role="main" style="padding: 10px 300px;">
-     <p>
-         <button type="button" class="btn btn-lg btn-default">技术</button>
-         <button type="button" class="btn btn-lg btn-info">信息</button>
-         <button type="button" class="btn btn-lg btn-warning">...</button>
-         <button type="button" class="btn btn-lg btn-primary">文档</button>
-         <button type="button" class="btn btn-lg btn-success">杂谈</button>
-         <button type="button" class="btn btn-lg btn-danger">music</button>
-         <button type="button" class="btn btn-lg btn-error"><a
-                 href='/about/'> 关于</a></button>
-     </p>
- </div>
+   <!-- my nav header -->
+   <div id="my_nav_header"></div>
+   <script>
+       $(document).ready(
+          function(){
+              $("#my_nav_header").load("../my_web_header.html");
+          }
+       );
+   </script>
 
- <div class="container">
+   <div class="container">
     <h2>关于</h2>
     你好,欢迎来到coolsnow77 的博客， 记录、分享自己所见所闻,
     共同进步，享受每一天的生活.
