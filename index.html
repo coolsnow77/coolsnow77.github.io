@@ -137,6 +137,13 @@
               })();
    </script>
 
-   <!- #include virtual="footer.html" ->
+   <p id="my_footer"></p>
+   <script>
+       $(document).ready(
+          function(){
+              $("#my_footer").load("footer.html");
+          }
+       );
+   </script>
 </body>
 </html>
