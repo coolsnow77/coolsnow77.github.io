@@ -6,38 +6,21 @@
      <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
 <body>
-    <div class="container">
-          <div class="text-left">
-              <strong>
-                  No pains, no gains.
-              </strong>
-          </div>
-          <div class="text-right">
-             <strong>Where there is a will, there is a way.</strong>
-          </div>
-      </div>
-      <script src="/dist/js/jquery-2.1.4.min.js"></script>
-      <script src="/dist/js/bootstrap.min.js"></script>
-     <div class="container jumbotron" role="main" style="padding: 10px 300px;">
-         <p>
-             <button type="button" class="btn btn-lg btn-default">技术</button>
-             <button type="button" class="btn btn-lg btn-info">信息</button>
-             <button type="button" class="btn btn-lg btn-warning">...</button>
-             <button type="button" class="btn btn-lg btn-primary">文档</button>
-             <button type="button" class="btn btn-lg btn-success">杂谈</button>
-             <button type="button" class="btn btn-lg btn-danger">music</button>
-             <button type="button" class="btn btn-lg btn-error"><a
-                     href='/about/'> 关于</a></button>
-         </p>
-     </div>
+   <!-- my nav header -->
+   <div id="my_nav_header"></div>
+   <script>
+       $(document).ready(
+          function(){
+              $("#my_nav_header").load("../my_web_header.html");
+          }
+       );
+   </script>
+   <div class="container">
+        <p id="ipId">ip</p>
+   </div>
 
-
-        <div class="container">
-            <p id="ipId">ip</p>
-        </div>
-
-        <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-        <script>
+   <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+   <script>
          function getClientIp()
          {
              var ipStr = "当前IP: <code>"+ returnCitySN["cip"]+'</code> '+ "来自: "+returnCitySN["cname"];
@@ -47,14 +30,14 @@
             console.log(ipStr);
         }
         getClientIp();
-        </script>
+     </script>
 
-        <!-- Linux 性能基准测试-->
-        <div class="container">
-            <pre>
-              <a href="http://niyunjiu.iteye.com/blog/316302" alter="linux
-              test"> Linux 基准测试</a>
-            </pre>
-        </div>
-    </body>
+      <!-- Linux 性能基准测试-->
+     <div class="container">
+         <pre>
+         <a href="http://niyunjiu.iteye.com/blog/316302" alter="linux
+            test"> Linux 基准测试</a>
+        </pre>
+     </div>
+</body>
 </html>
